@@ -17,9 +17,12 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)
 
+
 re: fclean all
+
+.PHONY: all clean fclean re
